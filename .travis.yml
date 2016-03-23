@@ -1,3 +1,13 @@
+language: scala
+
+scala:
+   - 2.11.8
+
+jdk: oraclejdk8
+
+script:
+  - sbt test
+
 # http://www.scala-sbt.org/0.13/docs/Travis-CI-with-sbt.html#%28Experimental%29+Reusing+Ivy+cache
 # Use container-based infrastructure
 sudo: false
@@ -13,15 +23,3 @@ before_cache:
   - find $HOME/.ivy2 -name "ivydata-*.properties" -delete
   - find $HOME/.sbt -name "*.lock" -delete
 
-language: scala
-
-scala:
-   - 2.11.8
-
-jdk: oraclejdk8
-
-script:
-  - sbt test
-
-before_script:
-  - mysql -uroot -e 'create database playunittest; create database test;'
