@@ -1,5 +1,5 @@
 # Backend Management
-![](https://travis-ci.org/JauFeng/backend-management/backend-management.svg?branch=master)
+[![Build Status](https://travis-ci.org/JauFeng/backend-management.svg?branch=master)](https://travis-ci.org/JauFeng/backend-management.svg)
 
 This is your new Play application
 =================================
