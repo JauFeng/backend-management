@@ -1,0 +1,33 @@
+@()
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>EventSource clock</title>
+
+        <script type="text/javascript" src="@routes.Assets.versioned("lib/bootstrap/css/bootstrap.min.css")"></script>
+        <script type="text/javascript" src="@routes.Assets.versioned("lib/jquery/jquery.min.js")"></script>
+
+    </head>
+    <body>
+        <h1>Server Sent Event clock</h1>
+
+        <h1 id="clock"></h1>
+
+        <p>
+            Clock events are pushed from the Server using a Server Sent Event connection.
+        </p>
+
+        <script type="text/javascript" charset="utf-8">
+                if (!!window.EventSource) {
+                    var stringSource = new EventSource("@routes.AsyncController.cometTest()");
+                    stringSource.addEventListener('message', function(e) {
+                        $('#clock').html(e.data.replace(/(\d)/g, '<span>$1</span>'))
+                    });
+                } else {
+                    $("#clock").html("Sorry. This browser doesn't seem to support Server sent event. Check <a href='http://html5test.com/compare/feature/communication-eventSource.html'>html5test</a> for browser compatibility.");
+                }
+        </script>
+    </body>
+</html>

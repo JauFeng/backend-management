@@ -1,0 +1,15 @@
+username = 姓名
+password = 密码
+
+auth.unknown = 无效用户: {0}
+password.unknown = 无效密码: {0}
+
+users.management = 用户管理
+patients.management = 患者管理
+doctors.management = 医师管理
+
+orders.management = 订单管理
+orders.uncompleted = 未完成订单
+orders.completed = 已完成订单
+
+statistics.analysis = 统计&分析

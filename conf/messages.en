@@ -1,0 +1,16 @@
+username = Username
+password = Password
+
+auth.unknown = Unknown author: {0}
+password.unknown = Unknown password: {0}
+
+users.management = User Management
+patients.management = Patient Management
+doctors.management = Doctor Management
+
+orders.management = Order Management
+orders.uncompleted = Order Uncompleted
+orders.completed = Order Completed
+
+statistics.analysis = Statistics & Analysis
+
