@@ -1,3 +1,6 @@
+# Backend Management
+![](https://travis-ci.org/JauFeng/backend-management/backend-management.svg?branch=master)
+
 This is your new Play application
 =================================
 
